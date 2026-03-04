@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "xpython",
+      "display_name": "Python 3.13 (XPython)",
+      "language": "python"
+    },
+    "language_info": {
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "version": "3.13.1"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "3321a5db-ebe4-40b9-8fb0-e87702f3f0e9",
+      "cell_type": "code",
+      "source": "import numpy as np\narr=np.array([[-1,2,0,4],[-4,0.5,6,0],[2.6,0,7,8],[3,-7,4,2.0]])\nprint(\"Original array:\\n\",arr)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Original array:\n [[-1.   2.   0.   4. ]\n [-4.   0.5  6.   0. ]\n [ 2.6  0.   7.   8. ]\n [ 3.  -7.   4.   2. ]]\n"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "id": "26f5a7a8-4b5a-4787-b05d-530ac6b809d0",
+      "cell_type": "code",
+      "source": "print(\"\\n Every other rows:\\n\",arr[0:3:2])",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\n Every other rows:\n [[-1.   2.   0.   4. ]\n [ 2.6  0.   7.   8. ]]\n"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "id": "81f1229f-910c-481f-811e-15fc3ee18ce8",
+      "cell_type": "code",
+      "source": "arr=np.array([1,2,3,4,5,6,7])\nprint(\"\\nOriginal array: \",arr)\nprint(\"\\n returns every other element in the array: arr[::2]: \",arr[::2])",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nOriginal array:  [1 2 3 4 5 6 7]\n\n returns every other element in the array: arr[::2]:  [1 3 5 7]\n"
+        }
+      ],
+      "execution_count": 3
+    },
+    {
+      "id": "8a956d1a-36a5-4829-8e1f-778522abb7eb",
+      "cell_type": "code",
+      "source": "arr=np.array([[-1,2,0,4],[-4,0.5,6,0],[2.6,0,7,8],[3,-7,4,2.0]])\ntemp=arr[:2,:3]\nprint(\"\\nArray with first 2 rows and 3 columns:\\n\",temp)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nArray with first 2 rows and 3 columns:\n [[-1.   2.   0. ]\n [-4.   0.5  6. ]]\n"
+        }
+      ],
+      "execution_count": 4
+    },
+    {
+      "id": "1efe9600-8d36-4aaf-8aed-41f9055cf7a4",
+      "cell_type": "code",
+      "source": "arr=np.array([[10,20,30,40],[50,60,70,80],[90,100,110,120],[130,140,150,160]])\ntemp=arr[[0,1,2,3],[3,2,1,0]]\nprint(\"\\nElements at indices(0,3),(1,1),(2,1)\",\"(3,0):\\n\",temp)\n\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nElements at indices(0,3),(1,1),(2,1) (3,0):\n [ 40  70 100 130]\n"
+        }
+      ],
+      "execution_count": 6
+    },
+    {
+      "id": "7213eccf-7636-4613-aeaa-e19f47b6d456",
+      "cell_type": "code",
+      "source": "arr=np.array([[1,2.4,3.4,90],[-50,-20,70,80],[90,0,1.6,120],[130,-40,10,16]])\ncond=arr>2\ntemp=arr[cond]\nprint(\"\\nElements greater than 2:\\n\",temp)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nElements greater than 2:\n [  2.4   3.4  90.   70.   80.   90.  120.  130.   10.   16. ]\n"
+        }
+      ],
+      "execution_count": 7
+    },
+    {
+      "id": "bd4b0bb8-66f4-4d83-a2bb-c8af30c63a7f",
+      "cell_type": "code",
+      "source": "arr1=np.array([1,2,3])\narr2=np.array([4,5,6])\narr=np.concatenate((arr1,arr2))\nprint(\"\\nOriginal arrays:\\n\",arr1,arr2)\nprint(\"\\nJoined array:\\n\",arr)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nOriginal arrays:\n [1 2 3] [4 5 6]\n\nJoined array:\n [1 2 3 4 5 6]\n"
+        }
+      ],
+      "execution_count": 8
+    },
+    {
+      "id": "13b13387-fc7f-4cae-8b99-5e2b41b88342",
+      "cell_type": "code",
+      "source": "arr=np.hstack((arr1,arr2))\nprint(\"\\n Horizontal joining:\\n\",arr)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\n Horizontal joining:\n [1 2 3 4 5 6]\n"
+        }
+      ],
+      "execution_count": 9
+    },
+    {
+      "id": "4df79bdb-039f-4149-b742-8bfa271af14e",
+      "cell_type": "code",
+      "source": "arr=np.vstack((arr1,arr2))\nprint(\"\\n vertical joining \\n\",arr)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\n vertical joining \n [[1 2 3]\n [4 5 6]]\n"
+        }
+      ],
+      "execution_count": 10
+    },
+    {
+      "id": "63607c6c-8b8c-4eac-991b-46458fde6ecf",
+      "cell_type": "code",
+      "source": "arr=np.dstack((arr1,arr2))\nprint(\"\\nDepth joining: \\n\",arr)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nDepth joining: \n [[[1 4]\n  [2 5]\n  [3 6]]]\n"
+        }
+      ],
+      "execution_count": 11
+    },
+    {
+      "id": "0121be4a-3177-4c34-8467-17fc0e2feed8",
+      "cell_type": "code",
+      "source": "arr=np.array([1,2,3,4,5,6])\nnewarr=np.array_split(arr,3)\nprint(\"\\nOriginal array:\\n\",arr)\nprint(\"Splitted array: \\n\",newarr)\nprint(\"\\n Splitted array in another form\\n\")\nprint(newarr[0])\nprint(newarr[1])\nprint(newarr[2])",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nOriginal array:\n [1 2 3 4 5 6]\nSplitted array: \n [array([1, 2]), array([3, 4]), array([5, 6])]\n\n Splitted array in another form\n\n[1 2]\n[3 4]\n[5 6]\n"
+        }
+      ],
+      "execution_count": 12
+    },
+    {
+      "id": "790e2d5e-7cc9-48ca-ae2e-568727a2835e",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
