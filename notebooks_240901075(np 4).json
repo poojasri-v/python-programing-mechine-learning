@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "xpython",
+      "display_name": "Python 3.13 (XPython)",
+      "language": "python"
+    },
+    "language_info": {
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "version": "3.13.1"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "2e22b0a4-e936-4c65-bedc-36bd2a4e51d0",
+      "cell_type": "code",
+      "source": "import numpy as np\narr1=[10,20,30,40,50]\narr2=[2,4,5,8,10]\na=np.array(arr1)\nb=np.array(arr2)\nprint(\"Original arrays\")\nprint(a)\nprint(b)\nprint(\"\\nVertor addition\")\nprint(a+b)\nprint(\"\\nVertor subtraction\")\nprint(a-b)\nprint(\"\\nVertor multiplication\")\nprint(a*b)\nprint(\"\\nVertor division\")\nprint(a/b)\nprint(\"\\nVertor Dot product\")\nprint(a.dot(b))\nprint(\"scalar multiplication\")\nsclr=5\nprint(\"Scalar value=\",sclr)\nprint(\"array=\",a)\nprint(\"result=\",a*sclr)\ndef my_func(x,y):\n    if x>y:\n         return x-y\n    else:\n         return x+y\narr1=[10,4,20]\narr2=[2,3,30]\nvec_func=np.vectorize(my_func)\nprint(\"array 1:\",arr1)\nprint(\"array 2:\",arr2)\nprint(\"result:\",vec_func(arr1,arr2))",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Original arrays\n[10 20 30 40 50]\n[ 2  4  5  8 10]\n\nVertor addition\n[12 24 35 48 60]\n\nVertor subtraction\n[ 8 16 25 32 40]\n\nVertor multiplication\n[ 20  80 150 320 500]\n\nVertor division\n[5. 5. 6. 5. 5.]\n\nVertor Dot product\n1070\nscalar multiplication\nScalar value= 5\narray= [10 20 30 40 50]\nresult= [ 50 100 150 200 250]\narray 1: [10, 4, 20]\narray 2: [2, 3, 30]\nresult: [ 8  1 50]\n"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "id": "08e5925f-7883-4a5b-9f06-1da770e1e76f",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
